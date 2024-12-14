@@ -160,3 +160,17 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Terraform
+*.tfvars
+__pycache__/
+*.pyc
+.env
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Terraform
+tf/.terraform/
+tf/terraform.tfstate
+tf/terraform.tfstate.backup
