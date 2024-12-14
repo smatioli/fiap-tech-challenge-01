@@ -1,5 +1,7 @@
 # FIAP - Tech Challenge 01
 
+# Arquitetura
+
 ![Arquitetura Simplificada](./docs/architecture.png)
 ![Board Miro](https://miro.com/app/board/uXjVL7Z2f4M=/?share_link_id=93685718113) 
 
@@ -85,6 +87,10 @@ A especificação da API está no arquivo `api_spec.yaml`
 
 https://github.com/smatioli/fiap-tech-challenge-01
 Ela pode ser visualizada no Swagger: https://editor.swagger.io/?url=https://raw.githubusercontent.com/smatioli/fiap-tech-challenge-01/main/api_spec.yaml
+
+# Analytics
+
+Detalhamento das visões analíticas com PBI
 
 # Deployment
 
