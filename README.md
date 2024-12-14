@@ -3,7 +3,7 @@
 # Arquitetura
 
 ![Arquitetura Simplificada](./docs/architecture.jpg)
-![Board Miro](https://miro.com/app/board/uXjVL7Z2f4M=/?share_link_id=93685718113) 
+Board Miro: https://miro.com/app/board/uXjVL7Z2f4M=/?share_link_id=93685718113
 
 # Infraestrutura
 
