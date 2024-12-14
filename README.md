@@ -83,7 +83,8 @@ poetry run python app/main.py
 
 A especificação da API está no arquivo `api_spec.yaml`
 
-Ela pode ser visualizada no Swagger: https://editor.swagger.io/?url=https://raw.githubusercontent.com/fiap-tech-challenge/tech-challenge-01/main/api_spec.yaml
+https://github.com/smatioli/fiap-tech-challenge-01
+Ela pode ser visualizada no Swagger: https://editor.swagger.io/?url=https://raw.githubusercontent.com/smatioli/fiap-tech-challenge-01/main/api_spec.yaml
 
 # Deployment
 
