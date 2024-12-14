@@ -174,3 +174,4 @@ dist/
 tf/.terraform/
 tf/terraform.tfstate
 tf/terraform.tfstate.backup
+tf/.terraform.lock.hcl
