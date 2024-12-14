@@ -39,6 +39,10 @@ CREATE TABLE production (
 
 ## Carga de dados.
 
+Os seguintes arquivos serão carregados no S3:
+
+TO-DO: Detalhar nomes dos arquivos
+
 A carga de dados deverá utilizar o pandas para ler os arquivos disponíveis no S3 e gravar no banco de dados Aurora.
 
 Formato original:
