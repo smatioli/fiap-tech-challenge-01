@@ -94,6 +94,12 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
+# UV
+#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#uv.lock
+
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
@@ -161,23 +167,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Terraform
-*.tfvars
-__pycache__/
-*.pyc
-.env
-dist/
-*.egg-info/
-.pytest_cache/
-
-# Terraform
-tf/.terraform/
-tf/terraform.tfstate
-tf/terraform.tfstate.backup
-tf/.terraform.lock.hcl
-
-# Azure
-tf_azure/.terraform/
-tf_azure/terraform.tfstate
-tf_azure/terraform.tfstate.backup
-tf_azure/.terraform.lock.hcl
+# PyPI configuration file
+.pypirc

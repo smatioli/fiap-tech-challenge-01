@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "project_name" {
   description = "Project name to be used for resource naming"
   type        = string
-  default     = "fiap-tech-challenge"
+  default     = "fiap"
 }
 
 variable "vpc_cidr" {
@@ -15,7 +15,6 @@ variable "vpc_cidr" {
   type        = string
   default     = "10.0.0.0/16"
 }
-
 
 variable "db_username" {
   description = "Database master username"
@@ -52,3 +51,21 @@ variable "private_subnet_cidr_c" {
   type        = string
   default     = "10.0.3.0/24"
 }
+
+variable "public_subnet_cidr_a" {
+  description = "CIDR block for public subnet in AZ a"
+  type        = string
+  default     = "10.0.4.0/24"
+}
+
+variable "public_subnet_cidr_b" {
+  description = "CIDR block for public subnet in AZ b"
+  type        = string
+  default     = "10.0.5.0/24"
+}
+
+variable "public_subnet_cidr_c" {
+  description = "CIDR block for public subnet in AZ c"
+  type        = string
+  default     = "10.0.6.0/24"
+} 

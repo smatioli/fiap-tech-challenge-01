@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "api-embrapa-mle"
+version = "0.1.0"
+description = ""
+authors = ["Rafaela <polizelc.rafaela@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+sqlalchemy = "^2.0.37"
+psycopg2-binary = "^2.9.10"
+pydantic = "^2.10.5"
+python-decouple = "^3.8"
+httpx = "^0.28.1"
+passlib = "^1.7.4"
+python-jose = "^3.3.0"
+python-multipart = "^0.0.20"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

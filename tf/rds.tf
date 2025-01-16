@@ -1,11 +1,25 @@
 # DB Subnet Group
 resource "aws_db_subnet_group" "aurora" {
   name       = "${var.project_name}-aurora-subnet-group"
-  subnet_ids = [aws_subnet.private_a.id, aws_subnet.private_b.id, aws_subnet.private_c.id]
+  subnet_ids = [aws_subnet.private_a.id, aws_subnet.private_b.id,aws_subnet.private_c.id]
 
   tags = {
     Name = "${var.project_name}-aurora-subnet-group"
   }
+
+  depends_on = [aws_subnet.private_a, aws_subnet.private_b, aws_subnet.private_c]
+}
+
+
+resource "aws_db_subnet_group" "aurora_public" {
+  name       = "${var.project_name}-aurora-public-subnet-group"
+  subnet_ids = [aws_subnet.public_a.id, aws_subnet.public_b.id, aws_subnet.public_c.id]
+
+  tags = {
+    Name = "${var.project_name}-aurora-public-subnet-group"
+  }
+
+  depends_on = [aws_subnet.public_a, aws_subnet.public_b, aws_subnet.public_c]
 }
 
 # Security Group for Aurora
@@ -43,7 +57,7 @@ resource "aws_rds_cluster" "aurora" {
   master_username       = var.db_username
   master_password       = var.db_password
   skip_final_snapshot   = true  # Set to false in production
-  db_subnet_group_name  = aws_db_subnet_group.aurora.name
+  db_subnet_group_name  = aws_db_subnet_group.aurora_public.name
   vpc_security_group_ids = [aws_security_group.aurora.id]
 
   tags = {
@@ -58,7 +72,7 @@ resource "aws_rds_cluster_instance" "aurora" {
   instance_class     = "db.t3.medium"  # Smallest instance class for Aurora
   engine            = aws_rds_cluster.aurora.engine
   engine_version    = aws_rds_cluster.aurora.engine_version
-
+  publicly_accessible = true
   tags = {
     Name = "${var.project_name}-aurora-instance"
   }
