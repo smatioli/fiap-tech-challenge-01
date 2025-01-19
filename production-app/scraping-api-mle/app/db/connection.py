@@ -9,4 +9,5 @@ DB_NAME = config('DB_NAME')
 
 # Construct the database URL
 DB_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
+engine = create_engine(DB_URL)
 SessionLocal = sessionmaker(bind=engine)

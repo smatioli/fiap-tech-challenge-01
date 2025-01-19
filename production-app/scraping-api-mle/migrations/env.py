@@ -12,7 +12,13 @@ from app.db.models import Base
 # access to the values within the .ini file in use.
 config = context.config
 
-DB_URL = config_decouple('DB_URL')
+DB_USER = config_decouple('DB_USER')
+DB_PASSWORD = config_decouple('DB_PASSWORD')
+DB_HOST = config_decouple('DB_HOST')
+DB_NAME = config_decouple('DB_NAME')
+
+# Construct the database URL
+DB_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 config.set_main_option('sqlalchemy.url', DB_URL)
 
 # Interpret the config file for Python logging.

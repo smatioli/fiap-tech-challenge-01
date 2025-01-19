@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  scraping:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    networks:
+      - embrapa-network
+    # restart: unless-stopped
+
+networks:
+  embrapa-network:
+    driver: bridge 
