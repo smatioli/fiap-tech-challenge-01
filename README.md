@@ -61,10 +61,7 @@ poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 # Especificação API
 
-A especificação da API está no arquivo `api_spec.yaml`
-
-https://github.com/smatioli/fiap-tech-challenge-01
-Ela pode ser visualizada no Swagger: https://editor.swagger.io/?url=https://raw.githubusercontent.com/smatioli/fiap-tech-challenge-01/main/api_spec.yaml
+A especificação da API está disponível em: http://52.87.237.166:8000/docs
 
 # Analytics
 
