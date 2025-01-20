@@ -61,7 +61,7 @@ poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 # Especificação API
 
-A especificação da API está disponível em: http://52.87.237.166:8000/docs
+A especificação da API está disponível em: <IP>/redoc
 
 # Analytics
 
