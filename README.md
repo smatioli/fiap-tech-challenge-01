@@ -94,7 +94,8 @@ Ela pode ser visualizada no Swagger: https://editor.swagger.io/?url=https://raw.
 
 # Analytics
 
-Detalhamento das visões analíticas com PBI
+Detalhamento das visões analíticas com PBI, pode ser acessado no link:
+https://app.powerbi.com/view?r=eyJrIjoiMTVhNTEwNDUtYTk4Yy00ODJhLTljOTAtODY3N2QzODhmMTc3IiwidCI6ImE5ZWYzOTU5LThiOTYtNGVlMC05MjNjLTFkODlhZDk2OWNmOSJ9
 
 # Deployment
 
