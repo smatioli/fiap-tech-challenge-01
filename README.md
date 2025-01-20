@@ -24,8 +24,28 @@ O banco de dados que vai armazenar o dados será o Aurora PostgreSQL, da AWS.
 
 Para cada tipo de dados será criada uma tabela. A gestão do modelo de dados é realizado pelo pacote `alembic`,
 
+```bash
+alembic init migrations
+
+alembic revision --autogenerate -m "add tables"
+
+alembic upgrade head
+```
+
+
 ## Carga de dados.
 
+Para extração dos dados do site e persistência em arquivo local, executar:
+
+```bash
+poetry run python scraping.py
+```
+
+Para ler os dados do arquivo e persistir no banco de dados, executar:
+
+```bash
+poetry run python scraping.py
+```
 
 # API
 
@@ -36,7 +56,7 @@ A aplicação Python será responsável por:
 - Expor uma APIs para consulta dos dados por tipo e ano
 
 ```bash
-poetry run python app/main.py
+poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
 # Especificação API
