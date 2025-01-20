@@ -169,7 +169,7 @@ __pycache__/
 dist/
 *.egg-info/
 .pytest_cache/
-
+DEPLOY.md
 # Terraform
 tf/.terraform/
 tf/terraform.tfstate

@@ -24,3 +24,7 @@ app.include_router(processing_router)
 app.include_router(exportation_router)
 app.include_router(importation_router)
 app.include_router(user_router)
+
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}

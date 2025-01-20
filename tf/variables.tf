@@ -69,3 +69,22 @@ variable "public_subnet_cidr_c" {
   type        = string
   default     = "10.0.6.0/24"
 } 
+
+variable "db_host" {
+  description = "Database host"
+  type        = string
+  sensitive   = true
+}
+
+
+variable "secret_key" {
+  description = "Secret key"
+  type        = string
+  sensitive   = true
+}
+
+variable "algorithm" {
+  description = "Algorithm"
+  type        = string
+  default     = "HS256"
+}
