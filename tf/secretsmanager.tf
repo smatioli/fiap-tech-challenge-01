@@ -16,23 +16,23 @@ resource "aws_secretsmanager_secret_version" "app_secrets" {
 }
 
 
-# IAM policy to allow ECS to access Secrets Manager
-resource "aws_iam_role_policy" "secrets_policy" {
-  name = "ecs-secrets-policy"
-  role = aws_iam_role.ecs_agent.id
+# # IAM policy to allow ECS to access Secrets Manager
+# resource "aws_iam_role_policy" "secrets_policy" {
+#   name = "ecs-secrets-policy"
+#   role = aws_iam_role.ecs_agent.id
 
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Effect = "Allow"
-        Action = [
-          "secretsmanager:GetSecretValue"
-        ]
-        Resource = [
-          aws_secretsmanager_secret.app_secrets.arn
-        ]
-      }
-    ]
-  })
-}
+#   policy = jsonencode({
+#     Version = "2012-10-17"
+#     Statement = [
+#       {
+#         Effect = "Allow"
+#         Action = [
+#           "secretsmanager:GetSecretValue"
+#         ]
+#         Resource = [
+#           aws_secretsmanager_secret.app_secrets.arn
+#         ]
+#       }
+#     ]
+#   })
+# }

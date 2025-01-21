@@ -9,10 +9,9 @@ Board Miro: https://miro.com/app/board/uXjVL7Z2f4M=/?share_link_id=93685718113
 
 A infraestrutura é criada através do Terraform (disponível no diretório `tf`):
 
-- Criar um cluster Aurora PostgreSQL
-- Criar um bucket S3
-- Criar uma tabela no banco de dados Aurora
-- Criar uma instancia EC2 para execução da aplicação
+- Criação de um cluster e DB RDS PostgreSQL
+- Criação de um bucket S3
+- Criação de um EC2 para execução da aplicação
 
 # Scraping 
 
